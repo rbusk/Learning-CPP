@@ -14,6 +14,7 @@ class Package {
 	public:
 		Package(const string &, const string &, int, double, double);
 		double calculateCost();
+		double getWeight(); //return weight
 
 	private:
 		string name;
