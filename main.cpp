@@ -7,11 +7,23 @@ using namespace std;
 
 int main()
 {
-	BankAccount myAcc("Mary", "0005", .05, 1000);
-
 	SubmarineLoan mySub("Mary", "0005", .05, 10000, 500, 1, 3000);
 
-	SavingsForSailing mySaving("Mary", "0005", .05, 1000, "anchor", 2000);
+	mySub.mutinizeMary();
+
+	mySub.credit(200);
+
+	mySub.makeAllPayments();
+
+	SavingsForSailing mySavings("Mary", "0005", .05, 1000, "anchor", 2000);
+
+	mySavings.deposit(100);
+
+	mySavings.checkIfReachedGoal();
+
+	mySavings.deposit(1000);
+
+	mySavings.checkIfReachedGoal();
 
 	return 0;
 }

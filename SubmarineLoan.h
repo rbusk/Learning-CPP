@@ -18,9 +18,8 @@ class SubmarineLoan : public BankAccount {
 	public:
 		SubmarineLoan(const string &, const string &, double, double, int, int, double);
 		void mutinizeMary();
-		void makePayment();
 		void credit(int); //subtract money from balance
-		void makeAllPayments(); //display payments and set balance to 0
+		void makeAllPayments(); //make and display all payments
 
 	private:
 		int numTorps; //number of torpedos
