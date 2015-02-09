@@ -7,12 +7,19 @@
 
 #include <iostream>
 #include <string>
+#include "Package.h"
+
 using namespace std;
 
-class TwoDayPackage
+class TwoDayPackage : public Package
 {
 	public:
+		TwoDayPackage(const string &n, const string &add, int zipCode, double w, double cPO, int);
+		double calculateCost();
 
 	private:
+		int extraCost;
 
-}
+};
+
+#endif
