@@ -14,11 +14,11 @@ using namespace std;
 class TwoDayPackage : public Package
 {
 	public:
-		TwoDayPackage(const string &n, const string &add, int zipCode, double w, double cPO, int);
+		TwoDayPackage(const string &n, const string &add, int zipCode, double w, double cPO, double);
 		double calculateCost();
 
 	private:
-		int extraCost;
+		double extraCost;
 
 };
 

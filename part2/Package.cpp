@@ -20,3 +20,8 @@ double Package::calculateCost()
 {
 	return weight * costPerOunce;
 }
+
+double Package::getWeight()
+{
+	return weight;
+}
