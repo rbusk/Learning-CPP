@@ -5,30 +5,32 @@
  */
 
 #include <iostream>
+#include <string>
+#include "BankAccount.h"
 #include "SubmarineLoan.h"
 
 //nondefault constructor
-SubmarineLoan::SubmarineLoan(const string &name, const string &accNum, double rate, double balance, int nT, int isMC, double pay)
-	: BankAccount(name, accNum, rate, balance)
+SubmarineLoan::SubmarineLoan(const string &n, const string &aN, double r, double b, int nT, int isMC, double pay)
+	: BankAccount(n, aN, r, b)
 {
 	numTorps = nT;
 	isMaryCaptain = isMC;
-	pay = payment;
+	payment = pay;
 }
 
-void mutinizeMary()
+void SubmarineLoan::mutinizeMary()
 {
 	isMaryCaptain = 0;
 }
 
 //subtract payment from balance
-void makePayment()
+void SubmarineLoan::makePayment()
 {
-	balance -= payment;
+	setBalance(getBalance()-payment);
 }
 
 //credit balance with input
-void credit(int amount)
+void SubmarineLoan::credit(int amount)
 {
-	balance -= amount;
+	setBalance(getBalance()-amount);
 }

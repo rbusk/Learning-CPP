@@ -3,8 +3,14 @@
  *
  * Implementation file for SavingsforSailing
  */
+ 
+#include <iostream>
+#include <string>
+#include "BankAccount.h"
+#include "SavingsForSailing.h"
+using namespace std;
 
-SavingsForSailing::SavingsForSailing(const string &name, const string &accNum, double rate, double balance, string i, double g)
+SavingsForSailing::SavingsForSailing(const string &name, const string &accNum, double rate, double balance, const string &i, double g)
 	: BankAccount(name, accNum, rate, balance)
 {
 	item = i;
@@ -14,18 +20,18 @@ SavingsForSailing::SavingsForSailing(const string &name, const string &accNum, d
 //deposit money in account
 void SavingsForSailing::deposit(double amount)
 {
-	balance += amount;
+	setBalance(getBalance()+amount);
 }
 
 //prints whether or not balance has reached goal
 void SavingsForSailing::checkIfReachedGoal()
 {
-	if (balance >=goal)
+	if (getBalance() >=goal)
 	{
 		cout << "You've reached your goal! You can now buy your " <<item << "." << endl;
 	}
 
-	if (balance < goal)
+	if (getBalance() < goal)
 	{
 		cout << "You haven't reached your goal. No " << item << " for you." << endl;
 	}

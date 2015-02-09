@@ -10,13 +10,13 @@
 
 #include <iostream>
 #include <string>
-#include "BankAccount"
+#include "BankAccount.h"
 using namespace std;
 
 class SubmarineLoan : public BankAccount {
 
 	public:
-		SubMarineLoan(const string &, const string, double, double, int, int, double);
+		SubmarineLoan(const string &, const string &, double, double, int, int, double);
 		void mutinizeMary();
 		void makePayment();
 		void credit(int); //subtract money from balance
@@ -28,4 +28,4 @@ class SubmarineLoan : public BankAccount {
 		double payment;
 };
 
-#endif SUBMARINELOAN_H
+#endif

@@ -5,13 +5,17 @@
  * class is a savings account
  */
 
+#ifndef SAVINGSFORSAILING_H
+#define SAVINGSFORSAILING_H
+
 #include <iostream>
+#include <string>
 using namespace std;
 
 class SavingsForSailing : public BankAccount {
 
 	public:
-		SavingsForSailing();
+		SavingsForSailing(const string &, const string &, double, double, const string &, double);
 		void deposit(double); //deposit money to savings account
 		void checkIfReachedGoal(); //prints whether or not balance has reached goal
 
@@ -19,4 +23,6 @@ class SavingsForSailing : public BankAccount {
 	private:
 		string item; //item money is being saved for
 		double goal; //amount of money needed to buy item
-}
+};
+
+#endif

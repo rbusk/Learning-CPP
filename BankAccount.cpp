@@ -5,11 +5,12 @@
  */
 
 #include <iostream>
+#include <string>
 #include "BankAccount.h"
 using namespace std;
 
 //nondefault constructor
-BankAccount::BankAccount (string n, string a, double ir, double b)
+BankAccount::BankAccount (const string &n, const string &a, double ir, double b)
 {
 	name = n;
 	accNum = a;
@@ -27,4 +28,9 @@ double BankAccount::calculateInterest()
 double BankAccount::getBalance()
 {
 	return balance;
+}
+
+void BankAccount::setBalance(double n)
+{
+	balance = n;
 }

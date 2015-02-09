@@ -12,9 +12,10 @@ using namespace std;
 class BankAccount {
 
 	public:
-		BankAccount(string, string, double, double);
+		BankAccount(const string &, const string &, double, double);
 		double calculateInterest(); //returns monthly interest
 		double getBalance(); //returns balance
+		void setBalance(double);
 
 	private:
 
