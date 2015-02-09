@@ -1,6 +1,7 @@
 /* Mary Connolly and Ryan Busk
  * Lab3, Part 1
- * Driver program to demonstrate the class SavingsForSailing
+ * Driver program to demonstrate the class SavingsForSailing.
+ * Executable will be named savingsmain
  */
 
 #include <iostream>

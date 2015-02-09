@@ -1,6 +1,7 @@
 /* Mary Connolly and Ryan Busk
  * Lab 3 Part 1
  * Driver program to demonstrate the derived class Submarine Loan
+ * Executable will be called loanmain
  */
 
 
