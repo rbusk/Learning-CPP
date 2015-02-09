@@ -14,5 +14,5 @@ int main()
 {
 	Package("Ryan", "Indiana", 46556, 2, .05);
 
-	TwoDayPackage("Mary", "California", 91210, 6, .06);
+	TwoDayPackage("Mary", "California", 91210, 6, .06, 2);
 }

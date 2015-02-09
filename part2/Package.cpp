@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include "Package.h"
 using namespace std;
 
 Package::Package(const string &n, const string &a, int z, double w, double cpo)
@@ -12,5 +13,10 @@ Package::Package(const string &n, const string &a, int z, double w, double cpo)
 	address = a;
 	zip = z;
 	weight = w;
-	costPerOunce = cop;
+	costPerOunce = cpo;
+}
+
+double Package::calculateCost()
+{
+	return weight * costPerOunce;
 }

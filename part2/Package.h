@@ -22,3 +22,5 @@ class Package {
 		double weight;
 		double costPerOunce;
 };
+
+#endif
