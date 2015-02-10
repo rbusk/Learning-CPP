@@ -10,12 +10,14 @@
 #include "TwoDayPackage.h"
 using namespace std;
 
+//nondefault constructor which calls Package constructor
 TwoDayPackage::TwoDayPackage(const string &n, const string &add, int zipCode, double w, double cPO, double c)
 	: Package(n, add, zipCode, w, cPO)
 {
 	extraCost = c;
 }
 
+//returns cost of sending package, which is the regular cost plus an extra fee
 double TwoDayPackage::calculateCost()
 {
 	return Package::calculateCost() + extraCost;

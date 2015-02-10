@@ -42,14 +42,16 @@ int main()
 	
 	double totalCost = 0; //total cost to send all packages
 
+	//iterate through array of pointers, printing information for each package
 	for (int i=0; i<6; i++)
 	{
 		ptr = array[i];
 
-		totalCost += ptr->calculateCost();
+		totalCost += ptr->calculateCost(); //update totalCost
 
+		//display information for each package
 		cout << setw(8) << ptr->getName() << setw(12) << ptr->getAddress() << setw(8) << ptr->getZip() << "         " << "$" << fixed << setprecision(2) << ptr->calculateCost() << endl;
 	}
 
-	cout << endl << "Total cost to send all packages: $" << totalCost << endl;
+	cout << endl << "Total cost to send all packages: $" << totalCost << endl; //display total cost
 }

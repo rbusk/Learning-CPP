@@ -1,5 +1,5 @@
 /* Mary Connolly and Ryan Busk
- * interface for package, the base class
+ * interface for Package, the base class
  */
 
 #ifndef PACKAGE_H
@@ -13,18 +13,18 @@ class Package {
 
 	public:
 		Package(const string &, const string &, int, double, double);
-		double virtual calculateCost();
+		double virtual calculateCost(); //calculate cost of sending package
 		double getWeight(); //return weight
 		string getName();
 		string getAddress();
 		int getZip();
 
 	private:
-		string name;
+		string name; //customer's name
 		string address;
-		int zip;
-		double weight;
-		double costPerOunce;
+		int zip; //zip code
+		double weight; //of package
+		double costPerOunce; //to send package
 };
 
 #endif

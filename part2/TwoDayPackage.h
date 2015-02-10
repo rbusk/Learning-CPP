@@ -1,4 +1,5 @@
 /* Mary Connolly and Ryan Busk
+ * Lab 3
  * interface foe class TwoDayPackage, a derived class
  */ 
 
