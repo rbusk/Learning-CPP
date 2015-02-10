@@ -14,7 +14,18 @@ Package::Package(const string &n, const string &a, int z, double w, double cpo)
 	name = n;
 	address = a;
 	zip = z;
+	
+	//before assigning weight and costPerOunce, check if the inputs are negative -- if so, switch sign to positive
+	if (w < 0)
+	{
+		w=-w;
+	}
 	weight = w;
+	
+	if (cpo < 0)
+	{
+		cpo = -cpo;
+	}
 	costPerOunce = cpo;
 }
 

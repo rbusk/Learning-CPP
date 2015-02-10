@@ -25,7 +25,8 @@ int main()
 	TwoDayPackage TwoDay2("Ariel", "Florida", 12345, 8, .5, 3);
 	array[1] = &TwoDay2;
 
-	TwoDayPackage TwoDay3("John", "Texas", 33333, 10, .5, 2);
+	//Note that because the weight, costPerOunce, and extraCost are input as negative numbers, the constructor will switch the values to positive
+	TwoDayPackage TwoDay3("John", "Texas", 33333, -10, -.5, -2);
 	array[2] = &TwoDay3;
 
 	//instantiate three overnight packages and place pointers in array
@@ -35,7 +36,8 @@ int main()
 	OvernightPackage Overnight2("Charles", "Carmel", 95923, 13, .4, .1);
 	array[4] = &Overnight2;
 
-	OvernightPackage Overnight3("Ryan", "South Bend", 46556, 8, .3, .05);
+	//Note that because the weight, costPerOunce, and extraCostPerOunce are input as negative numbers, the constructor will switch the values to positive
+	OvernightPackage Overnight3("Ryan", "South Bend", 46556, -8, -.3, -.05);
 	array[5] = &Overnight3;
 
 	cout << setw(8) << "Name" << setw(12) << "Address" << setw(8) << "Zip" << setw(14) << "Cost to ship" << endl << endl;

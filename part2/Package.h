@@ -13,7 +13,7 @@ class Package {
 
 	public:
 		Package(const string &, const string &, int, double, double);
-		double virtual calculateCost(); //calculate cost of sending package
+		virtual double calculateCost(); //calculate cost of sending package
 		double getWeight(); //return weight
 		string getName();
 		string getAddress();

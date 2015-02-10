@@ -14,6 +14,11 @@ using namespace std;
 TwoDayPackage::TwoDayPackage(const string &n, const string &add, int zipCode, double w, double cPO, double c)
 	: Package(n, add, zipCode, w, cPO)
 {
+	//If the extraCost will be less than 0, switch to positive
+	if (c < 0)
+	{
+		c = -c;
+	}
 	extraCost = c;
 }
 

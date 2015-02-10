@@ -14,6 +14,11 @@ using namespace std;
 OvernightPackage::OvernightPackage(const string &n, const string &add, int zipCode, double w, double cPO, double ecpo)
 	: Package(n, add, zipCode, w, cPO)
 {
+	//check if extraCostPerOunce will be negative -- if so, switch to positive
+	if (ecpo < 0)
+	{
+		ecpo = -ecpo;
+	}
 	extraCostPerOunce = ecpo;
 }
 
