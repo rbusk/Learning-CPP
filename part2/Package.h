@@ -13,8 +13,11 @@ class Package {
 
 	public:
 		Package(const string &, const string &, int, double, double);
-		double calculateCost();
+		double virtual calculateCost();
 		double getWeight(); //return weight
+		string getName();
+		string getAddress();
+		int getZip();
 
 	private:
 		string name;

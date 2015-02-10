@@ -16,6 +16,21 @@ Package::Package(const string &n, const string &a, int z, double w, double cpo)
 	costPerOunce = cpo;
 }
 
+string Package::getName()
+{
+	return name;
+}
+
+string Package::getAddress()
+{
+	return address;
+}
+
+int Package::getZip()
+{
+	return zip;
+}
+
 double Package::calculateCost()
 {
 	return weight * costPerOunce;
