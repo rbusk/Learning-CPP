@@ -1,10 +1,16 @@
-all: main
+all: loanmain savingsmain
 
-main: main.o BankAccount.o SubmarineLoan.o SavingsForSailing.o
-	g++ main.o BankAccount.o SubmarineLoan.o SavingsForSailing.o -o main
+loanmain: SubmarineLoanMain.o BankAccount.o SubmarineLoan.o
+	g++ SubmarineLoanMain.o BankAccount.o SubmarineLoan.o  -o loanmain
 
-main.o: main.cpp
-	g++ -c main.cpp
+savingsmain: SavingsForSailingMain.o BankAccount.o SavingsForSailing.o
+	g++ SavingsForSailingMain.o BankAccount.o SavingsForSailing.o -o savingsmain
+
+SubmarineLoanMain.o: SubmarineLoanMain.cpp
+	g++ -c SubmarineLoanMain.cpp
+
+SavingsForSailingMain.o: SavingsForSailingMain.cpp
+	g++ -c SavingsForSailingMain.cpp
 
 BankAccount.o: BankAccount.cpp
 	g++ -c BankAccount.cpp
@@ -16,4 +22,4 @@ SavingsForSailing.o: SavingsForSailing.cpp
 	g++ -c SavingsForSailing.cpp
 
 clean:
-	rm -f *.o main
+	rm -f *.o loanmain savingsmain

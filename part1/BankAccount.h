@@ -12,7 +12,7 @@ using namespace std;
 class BankAccount {
 
 	public:
-		BankAccount(const string &, const string &, double, double);
+		BankAccount(const string &, const string &, double, double); //nondefault constructor
 		double calculateInterest(); //returns monthly interest
 		double getBalance(); //returns balance
 		void setBalance(double);
@@ -22,6 +22,6 @@ class BankAccount {
 		string name; //owner's name
 		string accNum; //account number
 		double rate; //interest rate
-		double balance;
+		double balance; //account's balance
 };
 #endif

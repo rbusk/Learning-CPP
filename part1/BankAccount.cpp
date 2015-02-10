@@ -1,7 +1,7 @@
 /* Ryan Busk and Mary Connolly
  * Lab 3
  *
- * Implemntation file for the BankAccount Class
+ * Implementation file for the BankAccount Class
  */
 
 #include <iostream>
@@ -24,7 +24,6 @@ double BankAccount::calculateInterest()
 	return rate * balance / 12;
 }
 
-//return balance
 double BankAccount::getBalance()
 {
 	return balance;
