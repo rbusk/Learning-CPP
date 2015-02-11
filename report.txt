@@ -9,4 +9,39 @@ In main.cpp, three TwoDayPackage objects and three OvernightPackage objects are 
 
 I verified that the output of the program is correct by checking the output of calculateCost() for the packages. The cost of TwoDayPackage objects is calculated correctly with the extra cost and the cost of OvernightPackage objects is calculated correctly with an extra cost per ouce. Additionally, the total cost is correctly calculated by adding the costs of all the packages. Furthermore, the constructors correctly check if the values weight, costPerOunce, extraCost, and extraCostPerOunce are negative, and if so, they switch the values to positive. (The third TwoDayPackage and OvernightPackage are instantiated with these negative values but the cost to send them is positive.)
 
+In order to make a base class abstract, it must have a pure virtual member
+function. This is a virtual function that is set to 0 in the header file and
+has no definition in the implementation file. Then, in order to make the
+derived classes concrete, this function which is pure and virtual in the base
+class must be defined in the implementation files for the derived classes.
 
+For Part 1, it feels more natural to use inheritance. When we changed the
+program for part 3 so that it used composition instead, calling BankAccount's
+member functions became slightly more complicated. In SavingsForSailing.cpp,
+if we wanted to set variables like the balance or deposit money, we had to use
+the dot operator to perform the functions on the BankAccount class inside of
+the SavingsForSailing class. This is more complicated than simply performing the function on the SavingsForSailing object itself, which is what we were able to do using inheritance.
+
+However, deciding between inheritance and composition is very dependent on the
+situation. For example, using composition for the Connect 4 lab felt much more
+natural since seven columns are naturally a part of one board.
+
+
+In order to make the base class (Package) abstract, the virtual member function
+calculateCost() should be made into a pure virtual function by setting it
+equal to 0 in the header and not providing an implementation in the .cpp file.
+Then, in order to make the derived classes concrete, calculateCost() should be
+defined in each of their .cpp files. 
+
+A virtual member function is different from a pure virtual member function. A
+base class can have virtual member functions and still be concrete as long as
+it does not have any pure virtual functions. A virtual function is different
+from a pure one because it does have a function definition in the base class's
+implementation file. The implementation files for the derived classes may
+redefine these functions, but if no redefinition is provided that the derived
+class will use the base class's definition. A pure virtual function has no
+definition for the base class, which means the derived classes must define it
+themselves and which means that a object of the base class cannot be
+instantiated.
+
+Someone might make a base class abstract if there is no reason to ever instantiate an object of the base class and if a member function is different for each derived class. For example, I could make Package abstract if I knew I would never instantiate a Package object and because the definitions for calculateCost() in OvernightPackage and TwoDayPackage are different and could be defined in the implementation files for these derived classes only.

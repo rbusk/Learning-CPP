@@ -3,6 +3,7 @@
  *
  * driver file for Package's derived classes
  * Also #3 part 2
+ * Two packages are instantiated with negative values, which results in messages for the user that the values will be switched to positive ones
  */
 
 #include <iostream>

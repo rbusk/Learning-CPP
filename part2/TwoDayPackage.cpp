@@ -17,6 +17,7 @@ TwoDayPackage::TwoDayPackage(const string &n, const string &add, int zipCode, do
 	//If the extraCost will be less than 0, switch to positive
 	if (c < 0)
 	{
+		cout << "Extra cost will be switched to a positive value." << endl;
 		c = -c;
 	}
 	extraCost = c;

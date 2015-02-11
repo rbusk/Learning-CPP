@@ -18,12 +18,14 @@ Package::Package(const string &n, const string &a, int z, double w, double cpo)
 	//before assigning weight and costPerOunce, check if the inputs are negative -- if so, switch sign to positive
 	if (w < 0)
 	{
+		cout << "Weight will be switched to a positive value." << endl;
 		w=-w;
 	}
 	weight = w;
 	
 	if (cpo < 0)
 	{
+		cout << "Cost per ounce will be switched to a positive value." << endl;
 		cpo = -cpo;
 	}
 	costPerOunce = cpo;

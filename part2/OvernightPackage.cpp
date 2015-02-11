@@ -17,6 +17,7 @@ OvernightPackage::OvernightPackage(const string &n, const string &add, int zipCo
 	//check if extraCostPerOunce will be negative -- if so, switch to positive
 	if (ecpo < 0)
 	{
+		cout << "Extra cost per ounce will be switched a positive value." << endl;
 		ecpo = -ecpo;
 	}
 	extraCostPerOunce = ecpo;
