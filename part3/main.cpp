@@ -9,15 +9,15 @@
 
 int main()
 {
-	const string name="Mary";
-	const string accNum = "54321";
-	double rate = .4;
-	double balance = 4000;
-	const string item = "Boat";
-	double goal = 10000;
+	const string name="Mary"; // declare name on Account
+	const string accNum = "54321"; // account number
+	double rate = .4; // rate on account
+	double balance = 4000; // balance on account
+	const string item = "Boat"; // what you want to buy
+	double goal = 10000; // how much that thing costs
 
-	SavingsForSailing saving(name,accNum,rate,balance,item,goal);
+	SavingsForSailing saving(name,accNum,rate,balance,item,goal); // instantiate clacc
 
-	saving.checkIfReachedGoal();
+	saving.checkIfReachedGoal(); // check if goal is reached
 }
 
